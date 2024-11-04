@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign In - Starbucks® Rewards</title>
+    <meta name="description" content="Sign in to your Starbucks® Rewards account to earn Stars and enjoy exclusive benefits.">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="/assets/icons/favicon-32x32.png" />
+    <link rel="apple-touch-icon" href="/assets/icons/apple-touch-icon.png" sizes="180x180" />
+</head>
+<body>
+
+    <!-- Skip to main content for accessibility -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <!-- Header -->
+    <header>
+        <nav class="navbar">
+            <a href="index.html" class="logo" aria-label="Home, Starbucks">
+                <!-- Replace the placeholder SVG with your actual logo SVG -->
+                <svg width="50" height="50" xmlns="http://www.w3.org/2000/svg">
+                    <!-- SVG Content Here -->
+                </svg>
+            </a>
+            <ul class="nav-links">
+                <li><a href="rewards.html#menu">Menu</a></li>
+                <li><a href="rewards.html#rewards">Rewards</a></li>
+                <li><a href="rewards.html#giftcards">Gift Cards</a></li>
+                <li><a href="rewards.html#store">Find a Store</a></li>
+                <li><a href="signin.html">Sign In</a></li>
+                <li><a href="signup.html">Join Now</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main id="main-content" class="container">
+        <div class="signin-container">
+            <h2>Sign In to Your Account</h2>
+            <form id="signin-form" aria-label="Sign In Form">
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" required placeholder="Enter your email">
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" required placeholder="Enter your password">
+                </div>
+                <button type="submit" class="signin-button">Sign In</button>
+                <p class="signup-link">Don't have an account? <a href="signup.html">Sign Up</a></p>
+            </form>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <nav class="footer-nav">
+            <ul>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#ourcompany">Our Company</a></li>
+                <li><a href="#ourcoffee">Our Coffee</a></li>
+                <li><a href="#stories">Stories and News</a></li>
+                <li><a href="#archive">Starbucks Archive</a></li>
+                <li><a href="#investor">Investor Relations</a></li>
+                <li><a href="#customerservice">Customer Service</a></li>
+                <li><a href="#contact">Contact Us</a></li>
+                <li><a href="#careers">Careers</a></li>
+                <li><a href="#privacy">Privacy Notice</a></li>
+                <li><a href="#terms">Terms of Use</a></li>
+                <li><a href="#donotshare">Do Not Share My Personal Information</a></li>
+                <li><a href="#caSupply">CA Supply Chain Act</a></li>
+                <li><a href="#accessibility">Accessibility</a></li>
+                <li><a href="#cookies">Cookie Preferences</a></li>
+            </ul>
+        </nav>
+        <p>© 2024 Starbucks Coffee Company. All rights reserved.</p>
+    </footer>
+
+    <!-- JavaScript for Form Validation -->
+    <script>
+        document.getElementById('signin-form').addEventListener('submit', function(e) {
+            e.preventDefault(); // Prevent form from submitting
+
+            const email = document.getElementById('email').value.trim();
+            const password = document.getElementById('password').value.trim();
+
+            // Simple validation
+            if (email === '' || password === '') {
+                alert('Please fill in all fields.');
+                return;
+            }
+
+            // Email format validation
+            const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailPattern.test(email)) {
+                alert('Please enter a valid email address.');
+                return;
+            }
+
+            // Password length validation
+            if (password.length < 6) {
+                alert('Password must be at least 6 characters long.');
+                return;
+            }
+
+            // If validation passes, proceed with form submission (e.g., send data to backend)
+            // For demonstration, we'll just log the data
+            console.log('Email:', email);
+            console.log('Password:', password);
+
+            // TODO: Implement backend authentication here
+            alert('Sign-in successful! (This is a placeholder message.)');
+            // Optionally, redirect to a dashboard or homepage
+            // window.location.href = 'dashboard.html';
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,558 @@
+/* =========================================
+   General Styles
+========================================= */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: #1e3932;
+    background-color: #f4f4f4;
+    line-height: 1.6;
+}
+
+/* =========================================
+   Accessibility
+========================================= */
+/* Skip Link */
+.skip-link {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    background: #006241;
+    color: white;
+    padding: 8px 16px;
+    z-index: 100;
+    transition: top 0.3s;
+    text-decoration: none;
+}
+
+.skip-link:focus {
+    top: 0;
+}
+
+/* =========================================
+   Header and Navigation
+========================================= */
+header {
+    background-color: #006241;
+    color: white;
+    padding: 10px 0;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.logo svg {
+    width: 50px;
+    height: 50px;
+    fill: white; /* Ensures the SVG logo is white */
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 16px;
+    transition: color 0.3s;
+}
+
+.nav-links li a:hover,
+.nav-links li a:focus {
+    color: #ffd700; /* Starbucks Gold for hover/focus state */
+}
+
+.nav-actions {
+    display: flex;
+    gap: 10px;
+}
+
+.nav-actions .btn {
+    padding: 8px 16px;
+    background-color: #ffffff;
+    color: #006241;
+    border: none;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.nav-actions .btn.primary {
+    background-color: #00704a;
+    color: white;
+}
+
+.nav-actions .btn:hover,
+.nav-actions .btn:focus {
+    background-color: #e0e0e0;
+}
+
+.nav-actions .btn.primary:hover,
+.nav-actions .btn.primary:focus {
+    background-color: #005c3a;
+}
+
+/* =========================================
+   Container
+========================================= */
+.container {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* =========================================
+   Buttons
+========================================= */
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #006241;
+    color: white;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.btn.primary {
+    background-color: #00704a;
+    color: white;
+}
+
+.btn:hover,
+.btn:focus {
+    background-color: #005c3a;
+}
+
+.btn.primary:hover,
+.btn.primary:focus {
+    background-color: #004d2a;
+}
+
+/* =========================================
+   Main Content Styles
+========================================= */
+main {
+    padding: 20px 0;
+}
+
+/* =========================================
+   Sections
+========================================= */
+.section {
+    margin-bottom: 40px;
+}
+
+.section h2 {
+    font-size: 28px;
+    color: #006241;
+    margin-bottom: 10px;
+}
+
+.section p {
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+
+/* =========================================
+   Promotional Sections
+========================================= */
+.promo-section {
+    padding: 40px 20px;
+    border-radius: 8px;
+    margin-bottom: 40px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.promo-content {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.promo-image {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    border-radius: 8px;
+}
+
+.promo-text {
+    max-width: 600px;
+}
+
+.promo-text h1,
+.promo-text h2 {
+    color: #006241;
+    margin-top: 0;
+}
+
+.promo-text p {
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.promo-text .btn {
+    margin-top: 15px;
+}
+
+/* Specific Promotional Section Styles */
+.halloween-promo {
+    background-color: #d2d655;
+}
+
+.pumpkin-party {
+    background-color: #fa745c;
+}
+
+.halloween-promo .promo-text h1,
+.pumpkin-party .promo-text h2 {
+    font-size: 32px;
+}
+
+.halloween-promo .btn,
+.pumpkin-party .btn {
+    background-color: #006241;
+    color: white;
+}
+
+.pumpkin-party .btn.primary {
+    background-color: #004d2a;
+}
+
+/* =========================================
+   Menu Sections
+========================================= */
+.menu-section {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.section-title {
+    background-color: #e5e5e5;
+    padding: 10px;
+    margin: 0;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.section-title:hover,
+.section-title:focus {
+    background-color: #d4d4d4;
+}
+
+.category {
+    margin-top: 10px;
+}
+
+.subcategory-container {
+    margin-top: 10px;
+}
+
+.subcategory-title {
+    background-color: #f0f0f0;
+    padding: 8px;
+    margin: 0;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.subcategory-title:hover,
+.subcategory-title:focus {
+    background-color: #e0e0e0;
+}
+
+.subcategory {
+    display: none; /* Hidden by default, toggled via JavaScript */
+    padding-left: 20px;
+    margin-top: 5px;
+}
+
+.item {
+    display: flex;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.item:last-child {
+    border-bottom: none;
+}
+
+.item-image {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    margin-right: 10px;
+    border-radius: 8px;
+}
+
+.item-name {
+    font-size: 16px;
+}
+
+/* =========================================
+   Forms
+========================================= */
+/* Sign-In and Sign-Up Forms */
+.signup-container,
+.signin-container {
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    margin: 50px auto;
+}
+
+.signup-title,
+.signin-title {
+    text-align: center;
+    color: #006241;
+    margin-bottom: 20px;
+}
+
+.signup-form,
+.signin-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group {
+    margin-bottom: 20px;
+    position: relative; /* For positioning toggle buttons */
+}
+
+.form-group label {
+    display: block;
+    color: #1e3932;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 12px;
+    padding-right: 40px; /* Space for toggle buttons */
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    transition: border-color 0.3s;
+}
+
+.form-group input:focus {
+    border-color: #006241;
+    outline: none;
+}
+
+.signup-button,
+.signin-button {
+    width: 100%;
+    padding: 12px;
+    background-color: #006241;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.signup-button:hover,
+.signin-button:hover {
+    background-color: #004d2a;
+}
+
+.signup-link,
+.signin-link {
+    text-align: center;
+    margin-top: 15px;
+    color: #555;
+}
+
+.signup-link a,
+.signin-link a {
+    color: #006241;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.signup-link a:hover,
+.signin-link a:hover {
+    text-decoration: underline;
+}
+
+/* =========================================
+   Footer Styles
+========================================= */
+footer {
+    background-color: #006241;
+    color: white;
+    padding: 20px 0;
+}
+
+.footer-nav {
+    max-width: 1200px;
+    margin: 0 auto 10px auto;
+    padding: 0 20px;
+}
+
+.footer-nav ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.3s;
+}
+
+.footer-nav ul li a:hover,
+.footer-nav ul li a:focus {
+    color: #ffd700; /* Starbucks Gold for hover/focus state */
+}
+
+footer p {
+    text-align: center;
+    font-size: 14px;
+    margin: 0;
+}
+
+/* =========================================
+   Responsive Styles
+========================================= */
+@media (max-width: 768px) {
+    /* Navbar */
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .nav-links li {
+        width: 100%;
+    }
+
+    .nav-links li a {
+        display: block;
+        width: 100%;
+        padding: 10px 0;
+    }
+
+    .nav-actions {
+        width: 100%;
+        justify-content: space-between;
+        margin-top: 10px;
+    }
+
+    /* Promotional Sections */
+    .promo-content {
+        flex-direction: column;
+    }
+
+    .promo-image {
+        max-width: 100%;
+    }
+
+    .promo-text h1,
+    .promo-text h2 {
+        font-size: 24px;
+    }
+
+    /* Menu Sections */
+    .menu-section {
+        padding: 15px;
+    }
+
+    .section-title {
+        font-size: 22px;
+    }
+
+    .subcategory-title {
+        font-size: 18px;
+    }
+
+    .item-image {
+        width: 80px;
+        height: 80px;
+    }
+
+    /* Forms */
+    .signup-container,
+    .signin-container {
+        margin: 20px;
+        padding: 30px;
+    }
+
+    /* Footer */
+    .footer-nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+/* =========================================
+   Form Validation Styles
+========================================= */
+.valid {
+    border-color: #28a745;
+}
+
+.invalid {
+    border-color: #dc3545;
+}
+
+/* =========================================
+   Additional Utility Classes
+========================================= */
+/* Learn More Link */
+.learn-more {
+    color: #006241;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.learn-more:hover,
+.learn-more:focus {
+    text-decoration: underline;
+}

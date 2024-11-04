@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Starbucks Menu</title>
+  <meta name="description" content="Explore the Starbucks menu, including drinks, food, at-home coffee, and merchandise.">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="/assets/icons/favicon-32x32.png" />
+  <link rel="apple-touch-icon" href="/assets/icons/apple-touch-icon.png" sizes="180x180" />
+</head>
+<body>
+
+  <!-- Skip to main content for accessibility -->
+  <a href="#primary-content" class="skip-link">Skip to main content</a>
+
+  <!-- Header -->
+  <header>
+    <nav class="navbar">
+      <a href="index.html" class="logo" aria-label="Home, Starbucks">
+        <!-- Replace the placeholder SVG with your actual logo SVG -->
+        <svg width="50" height="50" xmlns="http://www.w3.org/2000/svg">
+          <!-- SVG Content Here -->
+        </svg>
+      </a>
+      <ul class="nav-links">
+        <li><a href="#rewards">Rewards</a></li>
+        <li><a href="#giftcards">Gift Cards</a></li>
+        <li><a href="#store">Find a Store</a></li>
+        <li><a href="#signin">Sign In</a></li>
+        <li><a href="#join">Join Now</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Main Content -->
+  <main id="primary-content" class="container">
+    <!-- Drinks Section -->
+    <section class="menu-section">
+      <h2 class="section-title" onclick="toggleSection('drinks')">Drinks</h2>
+      <div id="drinks" class="category">
+        
+        <!-- Hot Coffees Subcategory -->
+        <div class="subcategory-container">
+          <h3 class="subcategory-title" onclick="toggleSection('hotCoffees')">Hot Coffees</h3>
+          <div id="hotCoffees" class="subcategory">
+            <div class="item">
+              <img src="placeholder.jpg" alt="Hot Coffee" class="item-image">
+              <p class="item-name">Hot Coffee</p>
+            </div>
+            <!-- Add more items as needed -->
+          </div>
+        </div>
+        
+        <!-- Cold Coffees Subcategory -->
+        <div class="subcategory-container">
+          <h3 class="subcategory-title" onclick="toggleSection('coldCoffees')">Cold Coffees</h3>
+          <div id="coldCoffees" class="subcategory">
+            <div class="item">
+              <img src="placeholder.jpg" alt="Cold Coffee" class="item-image">
+              <p class="item-name">Cold Coffee</p>
+            </div>
+            <!-- Add more items as needed -->
+          </div>
+        </div>
+        
+        <!-- Starbucks Refreshers® Beverages Subcategory -->
+        <div class="subcategory-container">
+          <h3 class="subcategory-title" onclick="toggleSection('refreshers')">Starbucks Refreshers® Beverages</h3>
+          <div id="refreshers" class="subcategory">
+            <div class="item">
+              <img src="placeholder.jpg" alt="Refresher" class="item-image">
+              <p class="item-name">Refresher</p>
+            </div>
+            <!-- Add more items as needed -->
+          </div>
+        </div>
+        
+        <!-- Frappuccino® Blended Beverages Subcategory -->
+        <div class="subcategory-container">
+          <h3 class="subcategory-title" onclick="toggleSection('frappuccinos')">Frappuccino® Blended Beverages</h3>
+          <div id="frappuccinos" class="subcategory">
+            <div class="item">
+              <img src="placeholder.jpg" alt="Frappuccino" class="item-image">
+              <p class="item-name">Frappuccino</p>
+            </div>
+            <!-- Add more items as needed -->
+          </div>
+        </div>
+        
+        <!-- Additional Subcategories -->
+        <!-- Example: Iced Tea & Lemonade, Hot Teas, Iced Energy, Milk, Juice & More, Bottled Beverages -->
+        <!-- Repeat the subcategory-container structure for each additional subcategory -->
+        
+      </div>
+    </section>
+
+    <!-- Food Section -->
+    <section class="menu-section">
+      <h2 class="section-title" onclick="toggleSection('food')">Food</h2>
+      <div id="food" class="category">
+        
+        <!-- Hot Breakfast Subcategory -->
+        <div class="subcategory-container">
+          <h3 class="subcategory-title" onclick="toggleSection('hotBreakfast')">Hot Breakfast</h3>
+          <div id="hotBreakfast" class="subcategory">
+            <div class="item">
+              <img src="placeholder.jpg" alt="Hot Breakfast" class="item-image">
+              <p class="item-name">Hot Breakfast</p>
+            </div>
+            <!-- Add more items as needed -->
+          </div>
+        </div>
+        
+        <!-- Oatmeal & Yogurt Subcategory -->
+        <div class="subcategory-container">
+          <h3 class="subcategory-title" onclick="toggleSection('oatmealYogurt')">Oatmeal & Yogurt</h3>
+          <div id="oatmealYogurt" class="subcategory">
+            <div class="item">
+              <img src="placeholder.jpg" alt="Oatmeal & Yogurt" class="item-image">
+              <p class="item-name">Oatmeal & Yogurt</p>
+            </div>
+            <!-- Add more items as needed -->
+          </div>
+        </div>
+        
+        <!-- Additional Subcategories -->
+        <!-- Example: Bakery, Lunch, Snacks & Sweets -->
+        <!-- Repeat the subcategory-container structure for each additional subcategory -->
+        
+      </div>
+    </section>
+
+    <!-- At Home Coffee Section -->
+    <section class="menu-section">
+      <h2 class="section-title" onclick="toggleSection('coffee')">At Home Coffee</h2>
+      <div id="coffee" class="category">
+        
+        <!-- Whole Bean Subcategory -->
+        <div class="subcategory-container">
+          <h3 class="subcategory-title" onclick="toggleSection('wholeBean')">Whole Bean</h3>
+          <div id="wholeBean" class="subcategory">
+            <div class="item">
+              <img src="placeholder.jpg" alt="Whole Bean" class="item-image">
+              <p class="item-name">Whole Bean Coffee</p>
+            </div>
+            <!-- Add more items as needed -->
+          </div>
+        </div>
+        
+        <!-- VIA® Instant Subcategory -->
+        <div class="subcategory-container">
+          <h3 class="subcategory-title" onclick="toggleSection('viaInstant')">VIA® Instant</h3>
+          <div id="viaInstant" class="subcategory">
+            <div class="item">
+              <img src="placeholder.jpg" alt="VIA Instant" class="item-image">
+              <p class="item-name">VIA® Instant Coffee</p>
+            </div>
+            <!-- Add more items as needed -->
+          </div>
+        </div>
+        
+      </div>
+    </section>
+
+    <!-- Merchandise Section -->
+    <section class="menu-section">
+      <h2 class="section-title" onclick="toggleSection('merchandise')">Merchandise</h2>
+      <div id="merchandise" class="category">
+        
+        <!-- Cold Cups Subcategory -->
+        <div class="subcategory-container">
+          <h3 class="subcategory-title" onclick="toggleSection('coldCups')">Cold Cups</h3>
+          <div id="coldCups" class="subcategory">
+            <div class="item">
+              <img src="placeholder.jpg" alt="Cold Cup" class="item-image">
+              <p class="item-name">Cold Cup</p>
+            </div>
+            <!-- Add more items as needed -->
+          </div>
+        </div>
+        
+        <!-- Additional Subcategories -->
+        <!-- Example: Tumblers, Mugs, Other -->
+        <!-- Repeat the subcategory-container structure for each additional subcategory -->
+        
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <nav class="footer-nav">
+      <ul>
+        <li><a href="#about">About Us</a></li>
+        <li><a href="#contact">Contact Us</a></li>
+        <li><a href="#careers">Careers</a></li>
+        <li><a href="#privacy">Privacy Notice</a></li>
+        <li><a href="#terms">Terms of Use</a></li>
+      </ul>
+    </nav>
+    <p>© 2024 Starbucks Coffee Company. All rights reserved.</p>
+  </footer>
+
+  <!-- External JavaScript File -->
+  <script src="scripts.js"></script>
+</body>
+</html>
